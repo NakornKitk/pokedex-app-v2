@@ -68,14 +68,14 @@ const DetailPage = () => {
                             </div>
                             <div className="flex gap-2 justify-start sm:justify-end mt-[16px]">
                                 {pokemon.data.types.map((item) => {
-                                    return <span className={`badge-type-${item.type.name} px-[14px] capitalize py-1 rounded-[16px]`}>{item.type.name}</span>
+                                    return <span key={item.type.name} className={`badge-type-${item.type.name} px-[14px] capitalize py-1 rounded-[16px]`}>{item.type.name}</span>
                                 })}
                             </div>
                             <div>
                                 <h5 className="text-white font-semibold">Abilities</h5>
                                 <div className="grid grid-cols-2 sm:grid-cols-1 gap-[10px] mt-[16px]">
                                     {pokemon.data.abilities.map((item)=>{
-                                        return <span className={`bg-[#4CAFEB] px-[14px] capitalize py-1 rounded-[16px]`}>{item.ability.name}</span>
+                                        return <span key={item.ability.name}  className={`bg-[#4CAFEB] px-[14px] capitalize py-1 rounded-[16px]`}>{item.ability.name}</span>
                                     })}
                                 </div>
                             </div>
@@ -83,7 +83,7 @@ const DetailPage = () => {
                                 <h5 className="text-white font-semibold">Stats</h5>
                                 <div className="grid grid-cols-1 gap-[10px] mt-[16px]">
                                     {pokemon.data.stats.map((item)=>{
-                                        return <div className="flex gap-x-[10px] justify-between">
+                                        return <div key={item.stat.name} className="flex gap-x-[10px] justify-between">
                                         <div className="text-[#4CAFEB] font-semibold capitalize">{item.stat.name}</div>
                                         <div className="text-white">{item.base_stat}</div>
                                     </div>

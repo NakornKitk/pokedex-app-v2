@@ -65,11 +65,11 @@ const useSearchForm = () => {
     const sortBy = (data: IPokemonDetailResponse[], type: 'id' | 'name') => {
         switch (type) {
             case 'id':
-                return data.sort((a,b) => a.id = b.id)
+                return data.sort((a, b) => a.id - b.id); // Corrected to use comparison operator
             case 'name':
-                return data.sort((a,b) => (a.name > b.name ? 1 : b.name > a.name ? -1 : 0))
+                return data.sort((a, b) => (a.name > b.name ? 1 : b.name > a.name ? -1 : 0));
             default:
-                return data.sort((a,b) => a.id - b.id)
+                return data.sort((a, b) => a.id - b.id);
         }
     }
 

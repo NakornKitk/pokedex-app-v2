@@ -38,14 +38,26 @@ jobs:
     if: github.ref == 'refs/heads/main'
 
     steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Set up Git configuration
+        run: |
+          git config --global user.name "GitHub Actions"
+          git config --global user.email "actions@github.com"
+
       - name: Download artifact
         uses: actions/download-artifact@v3
         with:
           name: production-files
           path: ./dist
 
+      - name: Clean repository
+        run: git clean -fdx
+
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./dist
+          target_branch: gh-pages  # Optional: Specify the target branch for deployment (usually "gh-pages")
