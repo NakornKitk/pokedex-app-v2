@@ -18,7 +18,7 @@ function App() {
   ]);
 
   return (
-    <div className="bg-[url('./images/list_bg.jpg')] min-h-[100vh]">
+    <div className="bg-[url('https://raw.githubusercontent.com/NakornKitk/pokedex-app-v2/refs/heads/main/public/images/list_bg.jpg')] min-h-[100vh]">
       <RouterProvider router={router} />
     </div>
   )

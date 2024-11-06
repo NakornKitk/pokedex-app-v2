@@ -14,7 +14,7 @@ const PokemonCard = ({image, name, id, types}: PokemonCardProps) => {
     return (
         <div className="rounded-[20px] overflow-hidden shadow dark:bg-gray-800 dark:border-gray-700 p-[16px] bg-[#253641] max-w-[275px] w-full m-[auto]">
             <div className="bg-[url('/images/poke-card-bg.png')] bg-center aspect-square w-full bg-cover rounded-[20px]">
-                <Link to={`/detail/${name}`} className="bg-[url('/images/poke-card-bg.png')]">
+                <Link to={`/pokedex-app-v2/detail/${name}`} className="bg-[url('/images/poke-card-bg.png')]">
                     <img className="rounded-t-lg h-[218px] p-[40px] w-full" src={image} alt="" />
                 </Link>
             </div>
