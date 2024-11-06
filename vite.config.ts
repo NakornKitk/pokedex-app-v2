@@ -7,5 +7,5 @@ export default defineConfig({
   resolve: {
     alias:[{find:'@',replacement:'/src'}]
   },
-  base:"/pokedex-search-app-v2/"
+  base:"/pokedex-app-v2/"
 })
