@@ -1,4 +1,6 @@
-  export interface IPokemonDetailResponse {
+
+/* eslint-disable @typescript-eslint/no-explicit-any */
+export interface IPokemonDetailResponse {
     abilities: Ability[]
     base_experience: number
     cries: Cries

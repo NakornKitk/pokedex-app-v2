@@ -3,7 +3,7 @@ import { useParams, Link} from 'react-router-dom'
 import { pokemonDetailServices } from '@/services'
 import { IPokemonDetailResponse} from '@/interface/pokemonDetail'
 
-
+/* eslint-disable @typescript-eslint/no-explicit-any */
 type pokemonType = {
     data: IPokemonDetailResponse | undefined
     loading: boolean

@@ -6,11 +6,13 @@ import {generationList} from '@/utils/optionList'
 import { IPokemonDetailResponse } from '@/interface/pokemonDetail';
 
 
+
+
 const useSearchForm = () => {
     const { 
         register, 
         watch, 
-        formState: {errors},
+        // formState: {errors},
     } = useForm();
 
     const {setFetchPokemonList, fetchPokemon, setPokemonList} = usePokemonListStore()
@@ -25,16 +27,14 @@ const useSearchForm = () => {
         setFetchPokemonList({data: [], loading: true, error: null})
         const responseList = await pokemonListServices.getPokemonList(filter.limit, filter.offset)
         const pokeList = []
-        
 
 
         if(responseList.status === 200){
             const responseResults = responseList.data?.results || []
             for (const pokemon of responseResults) {
                 const response = await pokemonDetailServices.getPokemonDetail(pokemon.name)
-                const pokeData = response.data
-                if (pokeData)
-                pokeList.push({...pokeData, image:pokeData.sprites.other.dream_world.front_default || pokeData.sprites.other['official-artwork']})
+                if (response.data)
+                pokeList.push({...response.data, image:response.data.sprites.other.dream_world.front_default || response.data.sprites.other['official-artwork'].front_default})
             }
             setFetchPokemonList({data: pokeList, loading: false, error: null})
             const data = filterPokemon(pokeList,keyword, type, sort)
