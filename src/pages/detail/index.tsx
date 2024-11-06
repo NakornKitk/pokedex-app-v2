@@ -39,15 +39,15 @@ const DetailPage = () => {
     return (
         <div className = 'w-[90%] m-[auto] max-w-[1100px]'>
             <div className = 'flex justify-center'>
-                <img src='/images/logo.webp' className='max-h-[80px] mt-[20px] relative' alt=""></img>
+                <img src='https://raw.githubusercontent.com/NakornKitk/pokedex-app-v2/refs/heads/main/public/images/logo.webp' className='max-h-[80px] mt-[20px] relative' alt=""></img>
             </div>
 
             <div className="w-[90%] max-w-[600px] m-[auto]">
-                <Link to={"/"} className="bg-[#4CAFEB] px-[16px] py-[4px] rounded-[16px] font-semibold">Back</Link>
+                <Link to={"/pokedex-app-v2/"} className="bg-[#4CAFEB] px-[16px] py-[4px] rounded-[16px] font-semibold">Back</Link>
                 {pokemon.data && (
                     <div className="rounded-[20px] overflow-hidden shadow p-[16px] m-[auto]">
                         <div className="bg-center aspect-square w-full bg-cover rounded-[20px] relative h-[400px]">
-                            <img className="absolute h-[auto] max-h-[400px] w-full aspect-square translate-x-[-50%] translate-y-[-50%] top-[50%] left-[50%]" src='/images/pokemon_bg.png' alt="" />
+                            <img className="absolute h-[auto] max-h-[400px] w-full aspect-square translate-x-[-50%] translate-y-[-50%] top-[50%] left-[50%]" src='https://raw.githubusercontent.com/NakornKitk/pokedex-app-v2/refs/heads/main/public/images/pokemon_bg.png' alt="" />
                             <img className="absolute rounded-t-lg h-[50%] sm:h-[250px] p-[40px] translate-x-[-50%] translate-y-[-50%] top-[50%] left-[50%]" src={pokemon.data.image} alt="" />
                         </div>
                     <div className="pt-5 bg-[#253641] rounded-[20px] p-[6px] my-[20px]">
