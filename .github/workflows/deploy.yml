@@ -50,7 +50,7 @@ jobs:
           git config user.email "github-actions@github.com"
 
       - name: Download artifact
-        uses: actions/download-artifact@v4
+        uses: actions/download-artifact@v3
         with:
           name: production-files
           path: ./dist
