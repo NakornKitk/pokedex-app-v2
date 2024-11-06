@@ -26,7 +26,7 @@ const useSearchForm = () => {
     const callData = async (filter: {name: string, limit: number, offset: number}) => {
         setFetchPokemonList({data: [], loading: true, error: null})
         const responseList = await pokemonListServices.getPokemonList(filter.limit, filter.offset)
-        const pokeList = []
+        const pokeList: IPokemonDetailResponse[] = []
 
 
         if(responseList.status === 200){
