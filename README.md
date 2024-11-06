@@ -1,11 +1,11 @@
 # Pokedex App Version 2
 
-2nd version of pokedex app developed by using typescript.
+2nd version of pokedex app developed by using for practice typescript.
 
 
-Visit our 1st version website here.
+Visit our 2st version website here.
 
-- [pokedex-app-v1](https://nakornkitk.github.io/pokedex-app/)
+- [pokedex-app-v2](https://nakornkitk.github.io/pokedex-app-v2/)
 
 
 <br>

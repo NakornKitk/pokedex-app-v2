@@ -8,11 +8,11 @@ function App() {
 
   const router = createBrowserRouter([
     {
-      path: "/",
+      path: "/pokedex-app-v2/",
       element: <HomePage />
     },
     {
-      path: "/detail/:name",
+      path: "/pokedex-app-v2/detail/:name",
       element: <DetailPage />
     }
   ]);
